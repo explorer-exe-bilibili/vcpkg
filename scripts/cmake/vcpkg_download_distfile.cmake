@@ -40,6 +40,15 @@ function(z_vcpkg_download_distfile_via_aria)
         "URLS;HEADERS"
     )
 
+    if(NOT DEFINED ARIA2 OR "${ARIA2}" STREQUAL "")
+        find_program(ARIA2 NAMES aria2c aria2)
+    endif()
+
+    if(NOT ARIA2)
+        message(STATUS "Aria2 not found; falling back to vcpkg download mode.")
+        return()
+    endif()
+
     message(STATUS "Using Aria2")  # Updated to display the URL
     message(STATUS "Downloading ${arg_FILENAME}...")
 
@@ -229,7 +238,7 @@ If you do not know the SHA512, add it as 'SHA512 0' and retry.")
     endif()
 
     # 优先尝试 ARIA2 下载（远程仓库新增功能）
-    if(NOT arg_DISABLE_ARIA2 AND _VCPKG_DOWNLOAD_TOOL STREQUAL "ARIA2" AND NOT EXISTS "${downloaded_file_path}")
+    if(NOT arg_DISABLE_ARIA2 AND NOT EXISTS "${downloaded_file_path}")
         if (arg_SKIP_SHA512)
             set(OPTION_SKIP_SHA512 "SKIP_SHA512")
         endif()
