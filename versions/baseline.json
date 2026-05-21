@@ -2114,7 +2114,7 @@
     },
     "cpprestsdk": {
       "baseline": "2.10.19",
-      "port-version": 4
+      "port-version": 5
     },
     "cppslippi": {
       "baseline": "1.4.3.18",
@@ -2902,7 +2902,7 @@
     },
     "f3d": {
       "baseline": "3.2.0",
-      "port-version": 0
+      "port-version": 1
     },
     "faad2": {
       "baseline": "2.11.2",
@@ -4934,7 +4934,7 @@
     },
     "libe57format": {
       "baseline": "3.3.0",
-      "port-version": 0
+      "port-version": 1
     },
     "libebur128": {
       "baseline": "1.2.6",
@@ -6233,7 +6233,7 @@
       "port-version": 1
     },
     "luau": {
-      "baseline": "0.720",
+      "baseline": "0.721",
       "port-version": 0
     },
     "lunarg-vulkantools": {
@@ -7666,7 +7666,7 @@
     },
     "pdal": {
       "baseline": "2.10.1",
-      "port-version": 0
+      "port-version": 1
     },
     "pdal-c": {
       "baseline": "2.2.0",
@@ -7825,7 +7825,7 @@
       "port-version": 5
     },
     "plutosvg": {
-      "baseline": "0.0.7",
+      "baseline": "0.0.8",
       "port-version": 0
     },
     "plutovg": {
@@ -8654,7 +8654,7 @@
     },
     "rdma-core": {
       "baseline": "62.0",
-      "port-version": 1
+      "port-version": 2
     },
     "re2": {
       "baseline": "2025-11-05",
@@ -9818,7 +9818,7 @@
     },
     "suitesparse-paru": {
       "baseline": "1.1.0",
-      "port-version": 0
+      "port-version": 1
     },
     "suitesparse-rbio": {
       "baseline": "4.3.5",
@@ -9926,7 +9926,7 @@
     },
     "tcl": {
       "baseline": "9.0.3",
-      "port-version": 1
+      "port-version": 2
     },
     "tclap": {
       "baseline": "1.2.5",
@@ -10686,7 +10686,7 @@
     },
     "vtk": {
       "baseline": "9.3.0-pv5.12.1",
-      "port-version": 15
+      "port-version": 16
     },
     "vtk-compile-tools": {
       "baseline": "9.3.0-pv5.12.1",
@@ -10826,7 +10826,7 @@
     },
     "whisper-cpp": {
       "baseline": "1.8.4",
-      "port-version": 0
+      "port-version": 1
     },
     "wiiuse": {
       "baseline": "0.15.7",
