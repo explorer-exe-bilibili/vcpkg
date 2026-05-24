@@ -2857,7 +2857,7 @@
       "port-version": 1
     },
     "ethindp-prism": {
-      "baseline": "0.16.1",
+      "baseline": "0.16.2",
       "port-version": 0
     },
     "etl": {
@@ -3433,7 +3433,7 @@
       "port-version": 0
     },
     "glaze": {
-      "baseline": "7.6.0",
+      "baseline": "7.7.0",
       "port-version": 0
     },
     "glbinding": {
@@ -3774,7 +3774,7 @@
     },
     "hdf5": {
       "baseline": "2.1.1",
-      "port-version": 0
+      "port-version": 1
     },
     "hdr-histogram": {
       "baseline": "0.11.9",
@@ -5026,7 +5026,7 @@
     },
     "libfuse": {
       "baseline": "3.18.2",
-      "port-version": 0
+      "port-version": 1
     },
     "libgcrypt": {
       "baseline": "1.12.2",
@@ -5453,7 +5453,7 @@
       "port-version": 2
     },
     "libpg-query": {
-      "baseline": "17-6.2.2",
+      "baseline": "18.0.0",
       "port-version": 0
     },
     "libphonenumber": {
@@ -5486,7 +5486,7 @@
     },
     "libpqxx": {
       "baseline": "8.0.1",
-      "port-version": 0
+      "port-version": 1
     },
     "libprotobuf-mutator": {
       "baseline": "1.5",
@@ -6721,7 +6721,7 @@
       "port-version": 0
     },
     "ms-gsl": {
-      "baseline": "4.2.1",
+      "baseline": "4.2.2",
       "port-version": 0
     },
     "ms-ifc-sdk": {
@@ -7213,8 +7213,8 @@
       "port-version": 3
     },
     "ocilib": {
-      "baseline": "4.8.0",
-      "port-version": 1
+      "baseline": "4.9.0",
+      "port-version": 0
     },
     "octave": {
       "baseline": "10.2.0",
@@ -8845,12 +8845,12 @@
       "port-version": 0
     },
     "robotraconteur": {
-      "baseline": "1.2.7",
+      "baseline": "1.2.8",
       "port-version": 0
     },
     "robotraconteur-companion": {
-      "baseline": "0.4.2",
-      "port-version": 2
+      "baseline": "0.4.3",
+      "port-version": 0
     },
     "rocksdb": {
       "baseline": "11.0.4",
@@ -9685,7 +9685,7 @@
       "port-version": 0
     },
     "stillwater-universal": {
-      "baseline": "4.6.16",
+      "baseline": "4.7.0",
       "port-version": 0
     },
     "stlab": {
@@ -10425,7 +10425,7 @@
       "port-version": 0
     },
     "utfcpp": {
-      "baseline": "4.1.0",
+      "baseline": "4.1.1",
       "port-version": 0
     },
     "utfz": {
