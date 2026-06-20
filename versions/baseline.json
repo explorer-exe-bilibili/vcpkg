@@ -1826,7 +1826,7 @@
     },
     "clickhouse-cpp": {
       "baseline": "2.6.2",
-      "port-version": 0
+      "port-version": 1
     },
     "clipboardxx": {
       "baseline": "0.5",
@@ -7402,7 +7402,7 @@
     },
     "opencv4": {
       "baseline": "4.12.0",
-      "port-version": 3
+      "port-version": 4
     },
     "opendnp3": {
       "baseline": "3.1.2",
@@ -10877,8 +10877,8 @@
       "port-version": 0
     },
     "wayland-protocols": {
-      "baseline": "1.48",
-      "port-version": 1
+      "baseline": "1.49",
+      "port-version": 0
     },
     "wcslib": {
       "baseline": "8.5",
@@ -11373,7 +11373,7 @@
       "port-version": 0
     },
     "zxc": {
-      "baseline": "0.11.0",
+      "baseline": "0.12.0",
       "port-version": 0
     },
     "zycore": {
