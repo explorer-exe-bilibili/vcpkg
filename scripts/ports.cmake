@@ -238,36 +238,14 @@ elseif(CMD STREQUAL "CREATE")
     endif()
     string(REGEX REPLACE "(\\.(zip|gz|tar|tgz|bz2))+\$" "" ROOT_NAME "${FILENAME}")
 
-    set(DOWNLOAD_PATH "${DOWNLOADS}/${FILENAME}")
-    file(TO_NATIVE_PATH "${DOWNLOAD_PATH}" NATIVE_DOWNLOAD_PATH)
+    # Use vcpkg_download_distfile to benefit from mirror and aria2 functionality
+    vcpkg_download_distfile(downloaded_file
+        SKIP_SHA512
+        FILENAME "${FILENAME}"
+        URLS "${URL}"
+    )
 
-    if(EXISTS "${DOWNLOAD_PATH}")
-        message(STATUS "Using pre-downloaded: ${NATIVE_DOWNLOAD_PATH}")
-        message(STATUS "If this is not desired, delete the file and ${NATIVE_PORT_PATH}")
-    else()
-        # Try mirror URL first
-        set(mirror_url "${URL}")
-        string(REPLACE "https://github.com/" "https://gh.llkk.cc/https://github.com/" mirror_url "${mirror_url}")
-        string(REPLACE "https://raw.githubusercontent.com/" "https://gh.llkk.cc/https://raw.githubusercontent.com/" mirror_url "${mirror_url}")
-        string(REPLACE "https://ftp.gnu.org/" "https://mirrors.aliyun.com/" mirror_url "${mirror_url}")
-        string(REPLACE "http://ftp.gnu.org/pub/gnu/" "https://mirrors.aliyun.com/gnu/" mirror_url "${mirror_url}")
-        string(REPLACE "https://ftp.postgresql.org/pub/" "https://mirrors.tuna.tsinghua.edu.cn/postgresql/" mirror_url "${mirror_url}")
-        
-        message(STATUS "Downloading ${mirror_url} -> ${FILENAME}...")
-        file(DOWNLOAD "${mirror_url}" "${DOWNLOAD_PATH}" STATUS download_status)
-        list(GET download_status 0 status_code)
-        
-        if(NOT "${status_code}" EQUAL "0")
-            message(STATUS "Mirror download failed, trying original URL...")
-            message(STATUS "Downloading ${URL} -> ${FILENAME}...")
-            file(DOWNLOAD "${URL}" "${DOWNLOAD_PATH}" STATUS download_status)
-            list(GET download_status 0 status_code)
-            if(NOT "${status_code}" EQUAL "0")
-                message(FATAL_ERROR "Downloading ${URL}... Failed. Status: ${download_status}")
-            endif()
-        endif()
-    endif()
-    file(SHA512 "${DOWNLOAD_PATH}" SHA512)
+    file(SHA512 "${downloaded_file}" SHA512)
 
     file(MAKE_DIRECTORY "${PORT_PATH}")
     configure_file("${SCRIPTS}/templates/portfile.in.cmake" "${PORTFILE_PATH}" @ONLY)

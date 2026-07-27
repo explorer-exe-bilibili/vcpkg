@@ -231,6 +231,8 @@ If you do not know the SHA512, add it as 'SHA512 0' and retry.")
 
         vcpkg_list(APPEND urls_param "--url=${url}")
         vcpkg_list(APPEND arg_URLS_Real "${url}")
+        message(STATUS "Original URL: ${arg_URLS_Original}")
+        message(STATUS "Modified URL: ${arg_URLS_Real}")
     endforeach()
 
     if(NOT vcpkg_download_distfile_QUIET)
