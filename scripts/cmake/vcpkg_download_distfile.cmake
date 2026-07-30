@@ -110,6 +110,8 @@ function(vcpkg_download_distfile out_var)
         "URLS;HEADERS"
     )
 
+    # SILENT_EXIT and QUIET are meaningless but accepting and ignoring them allows
+    # vcpkg_download_distfile to pass through parameters without needing manipulation.
     if(NOT DEFINED arg_URLS)
         message(FATAL_ERROR "vcpkg_download_distfile requires a URLS argument.")
     endif()
