@@ -350,3 +350,13 @@ If you do not know the SHA512, add it as 'SHA512 0' and retry.")
 
     set("${out_var}" "${downloaded_file_path}" PARENT_SCOPE)
 endfunction()
+
+# 为 vcpkg_from_github 提供内部入口函数
+function(z_vcpkg_download_distfile out_var)
+    # 使用临时变量接收下载路径
+    set(_download_result_var "${out_var}")
+    # 调用主下载函数，它会在当前作用域设置 _download_result_var
+    vcpkg_download_distfile(_download_result_var ${ARGN})
+    # 将下载路径传递给调用者（vcpkg_from_github）
+    set("${out_var}" "${_download_result_var}" PARENT_SCOPE)
+endfunction()
